@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cc_news_listing_page_image
+    - media.type.cc_media_mt_image
+    - node.type.cc_news
+id: node.cc_news.field_cc_news_listing_page_image
+field_name: field_cc_news_listing_page_image
+entity_type: node
+bundle: cc_news
+label: 'Listing page image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      cc_media_mt_image: cc_media_mt_image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

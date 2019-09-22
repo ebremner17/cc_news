@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cc_news_summary
+    - node.type.cc_news
+  module:
+    - text
+id: node.cc_news.field_cc_news_summary
+field_name: field_cc_news_summary
+entity_type: node
+bundle: cc_news
+label: Summary
+description: 'Enter the summary for the news item, this will be displaying on the new listing page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

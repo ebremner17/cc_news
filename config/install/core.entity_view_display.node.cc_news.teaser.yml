@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cc_news.field_cc_news_date
+    - field.field.node.cc_news.field_cc_news_listing_page_image
+    - field.field.node.cc_news.field_cc_news_summary
+    - field.field.node.cc_news.layout_builder__layout
+    - node.type.cc_news
+  module:
+    - user
+id: node.cc_news.teaser
+targetEntityType: node
+bundle: cc_news
+mode: teaser
+content: {  }
+hidden:
+  field_cc_news_date: true
+  field_cc_news_listing_page_image: true
+  field_cc_news_summary: true
+  layout_builder__layout: true
+  links: true

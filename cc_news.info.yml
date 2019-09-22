@@ -1,0 +1,19 @@
+name: News
+description: 'Provides a news item, notifications will be sent when content is published.'
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - entity_browser
+  - entity_browser_block_layout
+  - field
+  - layout_builder
+  - layout_builder_restrictions
+  - layout_discovery
+  - media
+  - menu_ui
+  - node
+  - path
+  - text
+  - user
+  - web_page
