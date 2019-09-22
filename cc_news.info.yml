@@ -17,3 +17,4 @@ dependencies:
   - text
   - user
   - web_page
+  - cc_site_controller
