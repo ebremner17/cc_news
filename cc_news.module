@@ -1,0 +1,60 @@
+<?php
+
+use Drupal\node\NodeInterface;
+use Drupal\message\Entity\Message;
+
+/**
+ * Implements hook_ENTITY_TYPE_update() for node entities.
+ *
+ * Sends emails to users when changed to published.
+ */
+function cc_news_node_insert(NodeInterface $node) {
+
+  // If we are on a news, process it.
+  if ($node->type->getValue()[0]['target_id'] == 'cc_news') {
+
+    // The updated nodes status.
+    $node_status = $node->status->getValue()[0]['value'];
+
+    // If we are changing to a published node, send emails.
+    if ($node_status) {
+
+      // Set the URL of the content to be used in the email.
+      $params['content_url'] = $node->toUrl()->setAbsolute()->toString();
+
+      _cc_site_controller_send_emails('news_created', $params);
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update() for node entities.
+ *
+ * Sends emails to users when changed to published.
+ */
+function cc_news_node_update(NodeInterface $node) {
+  dpm('here');
+
+  // If we are on a news, process it.
+  if ($node->type->getValue()[0]['target_id'] == 'cc_news') {
+
+    // The updated nodes status.
+    $node_status = $node->status->getValue()[0]['value'];
+
+    if (isset($node->original->status->getValue()[0]['value']) && $node->original->status->getValue()[0]['value'] !== NULL) {
+      $original_node_status = $node->original->status->getValue()[0]['value'];
+    }
+    else {
+      $original_node_status = 0;
+    }
+
+    // If we are changing to a published node, send emails.
+    if (!$original_node_status && $node_status) {
+
+      // Set the URL of the content to be used in the email.
+      $params['content_url'] = $node->toUrl()->setAbsolute()->toString();
+
+      _cc_site_controller_send_emails('news_created', $params);
+    }
+  }
+}
