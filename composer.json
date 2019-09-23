@@ -1,0 +1,7 @@
+{
+  "name": "ebremner17/cc_news",
+  "description": "News for Cadets Canada.",
+  "type": "drupal-custom-module",
+  "homepage": "https://github.com/ebremner17/cc_news",
+  "keywords": ["Drupal"]
+}
