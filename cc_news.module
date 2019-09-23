@@ -33,7 +33,6 @@ function cc_news_node_insert(NodeInterface $node) {
  * Sends emails to users when changed to published.
  */
 function cc_news_node_update(NodeInterface $node) {
-  dpm('here');
 
   // If we are on a news, process it.
   if ($node->type->getValue()[0]['target_id'] == 'cc_news') {
