@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: cc_pa_news
+label: News
+type: 'canonical_entities:node'
+pattern: 'news/[node:title]'
+selection_criteria:
+  80cf3511-a556-4188-8774-d3a43d400be1:
+    id: node_type
+    bundles:
+      cc_news: cc_news
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 80cf3511-a556-4188-8774-d3a43d400be1
+selection_logic: and
+weight: -5
+relationships: {  }
