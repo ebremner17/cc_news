@@ -3,6 +3,7 @@ description: 'Provides a news item, notifications will be sent when content is p
 type: module
 core: 8.x
 dependencies:
+  - cc_media
   - cc_site_controller
   - datetime
   - entity_browser

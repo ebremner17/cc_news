@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.cc_news.field_cc_news_date
     - field.field.node.cc_news.field_cc_news_listing_page_image
     - field.field.node.cc_news.field_cc_news_summary
+    - field.field.node.cc_news.layout_builder__layout
     - node.type.cc_news
   module:
     - datetime
@@ -75,5 +76,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  layout_builder__layout: true
   sticky: true
   uid: true
