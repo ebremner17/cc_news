@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Update extra large image crop ratio.
+ */
+function cc_news_update_8100() {
+
+  // Config files that have changed.
+  $imports = array(
+    'core.entity_form_display.node.cc_news.default',
+  );
+
+  // Update the config.
+  _cc_site_controller_update_config('cc_news', $imports);
+}
